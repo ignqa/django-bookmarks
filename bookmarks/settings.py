@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'account.apps.AccountConfig',
+    'account.apps.AccountConfig',  # This way Django will use this first instead of any authentication templates
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -119,3 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Values are the namespaces ('name' parameter) defined in the urlpatterns url paths
+LOGIN_REDIRECT_URL = 'dashboard'  # Tells Django which URL to redirect the user to after a successful login if no
+# next parameter is present in the request
+LOGIN_URL = 'login'  # The URL to redirect the user to log in (for example, views using the login_required decorator)
+LOGOUT_URL = 'logout'  # The URL to redirect the user to log out
