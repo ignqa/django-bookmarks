@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -126,5 +124,10 @@ LOGIN_REDIRECT_URL = 'dashboard'  # Tells Django which URL to redirect the user 
 # next parameter is present in the request
 LOGIN_URL = 'login'  # The URL to redirect the user to log in (for example, views using the login_required decorator)
 LOGOUT_URL = 'logout'  # The URL to redirect the user to log out
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  # Local path
 
 

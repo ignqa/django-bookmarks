@@ -11,7 +11,7 @@ The implemented features are the next:
     * `http://localhost:8000/account/Log-in`
     * `http://localhost:8000/admin`
         * User: `admin`
-        * Password: `admin`
+        * Password: `electric01*`
         
 # References
 * [Django 3 By Example - Third Edition (Antonio Mele)](https://learning.oreilly.com/library/view/django-3-by/9781838981952/)
